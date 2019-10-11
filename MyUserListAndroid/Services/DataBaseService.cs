@@ -5,12 +5,24 @@ using SQLite;
 
 namespace MyUserListAndroid
 {
-    public class DataBaseService
+    public sealed class DataBaseService
     {
         private SQLiteConnection db;
+        private static DataBaseService instance;
 
-        public void InitDataBase()
+        public static DataBaseService Instance
         {
+            get
+            {
+                if (instance == null)
+                {
+                    instance = new DataBaseService();
+                }
+                return instance;
+            }
+        }
+
+        private DataBaseService() {
             var databasePath = Path.Combine(
                 System.Environment.GetFolderPath(
                 System.Environment.SpecialFolder.Personal), "userListTemp.db3");
@@ -49,6 +61,28 @@ namespace MyUserListAndroid
         public void CloseDB()
         {
             db.Close();
+        }
+    }
+}
+
+
+public sealed class Singleton
+{
+    private static Singleton instance = null;
+
+    private Singleton()
+    {
+    }
+
+    public static Singleton Instance
+    {
+        get
+        {
+            if (instance == null)
+            {
+                instance = new Singleton();
+            }
+            return instance;
         }
     }
 }

@@ -40,8 +40,7 @@ namespace MyUserListAndroid
         {
             base.OnResume();
 
-            db = new DataBaseService();
-            db.InitDataBase();
+            db = DataBaseService.Instance;
             db.CreateTable();
             userList = db.getUserInfo();
 
@@ -74,7 +73,6 @@ namespace MyUserListAndroid
         {
             var intent = new Intent(this, typeof(UserRegistration));
             StartActivity(intent);
-            db.CloseDB();
         }
 
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)

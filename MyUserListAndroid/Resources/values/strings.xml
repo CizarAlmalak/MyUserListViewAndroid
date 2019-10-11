@@ -5,6 +5,11 @@
     <string name="first_name_label">First Name:</string>
     <string name="last_name_label">Last Name:</string>
     <string name="age_label">Age:</string>
+    <string name="hint_first_name_label">First Name</string>
+    <string name="hint_last_name_field">Last Name</string>
+    <string name="hint_age_field">Age</string>
+    <string name="hint_password_field">Password</string>
+    <string name="submit_button_label">SUBMIT</string>
     <string name="error_letters_and_number_only">Only letters and numbers are allowed</string>
     <string name="error_min_one_letter">Password has to have at least 1 letter</string>
     <string name="error_min_one_number">Password has to have at least 1 number</string>

@@ -38,8 +38,7 @@ namespace MyUserListAndroid
 
             userValidation = new UserValidation();
 
-            db = new DataBaseService();
-            db.InitDataBase();
+            db = DataBaseService.Instance;
         }
 
         private void onSubmit(object sender, EventArgs eventArgs)

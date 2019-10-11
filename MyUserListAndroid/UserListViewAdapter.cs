@@ -10,12 +10,12 @@ namespace MyUserListAndroid
     public class UserListViewAdapter : BaseAdapter<UserInfo>
     {
         private List<UserInfo> userInfo;
-        private Context lvContext;
+        private Context activityContext;
 
         public UserListViewAdapter(Context context, List<UserInfo> userList)
         {
             userInfo = userList;
-            lvContext = context;
+            activityContext = context;
         }
 
         public override UserInfo this[int position] => userInfo[position];
@@ -33,7 +33,7 @@ namespace MyUserListAndroid
 
             if (row == null)
             {
-                row = LayoutInflater.From(lvContext).Inflate(Resource.Layout.userinfo_row, null, false);
+                row = LayoutInflater.From(activityContext).Inflate(Resource.Layout.userinfo_row, null, false);
             }
 
             TextView firstNameTextView = row.FindViewById<TextView>(Resource.Id.firstName);
