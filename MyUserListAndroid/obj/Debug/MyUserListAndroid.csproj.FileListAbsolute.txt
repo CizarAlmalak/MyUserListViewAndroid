@@ -237,11 +237,11 @@
 /Users/cizaralmalak/Projects/MyUserListAndroid/MyUserListAndroid/obj/Debug/android/src/mono/android/support/v4/widget/DrawerLayout_DrawerListenerImplementor.java
 /Users/cizaralmalak/Projects/MyUserListAndroid/MyUserListAndroid/obj/Debug/android/src/mono/android/support/v4/app/SharedElementCallback_OnSharedElementsReadyListenerImplementor.java
 /Users/cizaralmalak/Projects/MyUserListAndroid/MyUserListAndroid/obj/Debug/android/src/mono/android/support/v4/app/FragmentManager_OnBackStackChangedListenerImplementor.java
-/Users/cizaralmalak/Projects/MyUserListAndroid/MyUserListAndroid/obj/Debug/android/src/mono/android/support/v13/view/inputmethod/InputConnectionCompat_OnCommitContentListenerImplementor.java
 /Users/cizaralmalak/Projects/MyUserListAndroid/MyUserListAndroid/obj/Debug/android/src/android/support/coordinatorlayout/R.java
-/Users/cizaralmalak/Projects/MyUserListAndroid/MyUserListAndroid/obj/Debug/android/src/mono/android/support/v13/view/DragStartHelper_OnDragStartListenerImplementor.java
+/Users/cizaralmalak/Projects/MyUserListAndroid/MyUserListAndroid/obj/Debug/android/src/mono/android/support/v13/view/inputmethod/InputConnectionCompat_OnCommitContentListenerImplementor.java
 /Users/cizaralmalak/Projects/MyUserListAndroid/MyUserListAndroid/obj/Debug/android/src/android/support/customtabs/CustomTabsClient_CustomTabsCallbackImpl.java
 /Users/cizaralmalak/Projects/MyUserListAndroid/MyUserListAndroid/obj/Debug/android/src/android/support/customtabs/R.java
+/Users/cizaralmalak/Projects/MyUserListAndroid/MyUserListAndroid/obj/Debug/android/src/mono/android/support/v13/view/DragStartHelper_OnDragStartListenerImplementor.java
 /Users/cizaralmalak/Projects/MyUserListAndroid/MyUserListAndroid/obj/Debug/android/src/android/support/compat/R.java
 /Users/cizaralmalak/Projects/MyUserListAndroid/MyUserListAndroid/obj/Debug/android/src/mono/android/support/v7/widget/RecyclerView_OnItemTouchListenerImplementor.java
 /Users/cizaralmalak/Projects/MyUserListAndroid/MyUserListAndroid/obj/Debug/android/src/mono/android/support/v7/widget/SearchView_OnCloseListenerImplementor.java
@@ -282,7 +282,6 @@
 /Users/cizaralmalak/Projects/MyUserListAndroid/MyUserListAndroid/obj/Debug/android/src/mono/android/app/ApplicationRegistration.java
 /Users/cizaralmalak/Projects/MyUserListAndroid/MyUserListAndroid/obj/Debug/android/src/android/support/design/R.java
 /Users/cizaralmalak/Projects/MyUserListAndroid/MyUserListAndroid/obj/Debug/android/src/xamarin/essentials/fileProvider.java
-/Users/cizaralmalak/Projects/MyUserListAndroid/MyUserListAndroid/obj/Debug/android/src/mono/MonoPackageManager_Resources.java
 /Users/cizaralmalak/Projects/MyUserListAndroid/MyUserListAndroid/obj/Debug/android/src/md5d630c3d3bfb5f5558520331566132d97/ActivityLifecycleContextListener.java
 /Users/cizaralmalak/Projects/MyUserListAndroid/MyUserListAndroid/obj/Debug/android/src/md5d630c3d3bfb5f5558520331566132d97/EnergySaverBroadcastReceiver.java
 /Users/cizaralmalak/Projects/MyUserListAndroid/MyUserListAndroid/obj/Debug/android/src/md5d630c3d3bfb5f5558520331566132d97/MagnetometerListener.java
@@ -296,6 +295,7 @@
 /Users/cizaralmalak/Projects/MyUserListAndroid/MyUserListAndroid/obj/Debug/android/src/md5d630c3d3bfb5f5558520331566132d97/OrientationSensorListener.java
 /Users/cizaralmalak/Projects/MyUserListAndroid/MyUserListAndroid/obj/Debug/android/src/md5d630c3d3bfb5f5558520331566132d97/BatteryBroadcastReceiver.java
 /Users/cizaralmalak/Projects/MyUserListAndroid/MyUserListAndroid/obj/Debug/android/src/md5d630c3d3bfb5f5558520331566132d97/GyroscopeListener.java
+/Users/cizaralmalak/Projects/MyUserListAndroid/MyUserListAndroid/obj/Debug/android/src/mono/MonoPackageManager_Resources.java
 /Users/cizaralmalak/Projects/MyUserListAndroid/MyUserListAndroid/obj/Debug/android/src/md5f57f8d2b8ebdc78a0dc4a820e687c79e/UserListViewAdapter.java
 /Users/cizaralmalak/Projects/MyUserListAndroid/MyUserListAndroid/obj/Debug/android/src/md5f57f8d2b8ebdc78a0dc4a820e687c79e/MainActivity.java
 /Users/cizaralmalak/Projects/MyUserListAndroid/MyUserListAndroid/obj/Debug/android/src/md5f57f8d2b8ebdc78a0dc4a820e687c79e/UserRegistration.java

@@ -1,29 +1,37 @@
 ﻿<Properties StartupConfiguration="{E8C5F161-A46B-455C-843F-F80D83061A6F}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="MyUserListAndroid/Resources/values/colors.xml">
+  <MonoDevelop.Ide.Workbench ActiveDocument="MyUserListAndroid/Validators/PasswordValidation.cs">
     <Files>
-      <File FileName="MyUserListAndroid/UserRegistration.cs" Line="49" Column="24" />
+      <File FileName="MyUserListAndroid/UserRegistration.cs" Line="65" Column="48" />
       <File FileName="MyUserListAndroid/UserListViewAdapter.cs" Line="1" Column="1" />
-      <File FileName="MyUserListAndroid/PasswordValidation.cs" Line="28" Column="17" />
-      <File FileName="MyUserListAndroid/MainActivity.cs" Line="52" Column="14" />
+      <File FileName="MyUserListAndroid/PasswordValidation.cs" Line="15" Column="27" />
+      <File FileName="MyUserListAndroid/MainActivity.cs" Line="78" Column="10" />
       <File FileName="MyUserListAndroid/IValidate.cs" Line="4" Column="31" />
       <File FileName="MyUserListAndroid/Resources/layout/user_registration.xml" Line="41" Column="39" />
-      <File FileName="MyUserListAndroid/DataBaseHandler.cs" Line="26" Column="46" />
-      <File FileName="MyUserListAndroid/Models/UserInfoTable.cs" Line="16" Column="1" />
+      <File FileName="MyUserListAndroid/DataBaseHandler.cs" Line="37" Column="14" />
+      <File FileName="MyUserListAndroid/Models/UserInfoTable.cs" Line="10" Column="29" />
       <File FileName="MyUserListAndroid/Models/UserInfo.cs" Line="1" Column="1" />
       <File FileName="MyUserListAndroid/Resources/values/styles.xml" Line="6" Column="54" />
-      <File FileName="MyUserListAndroid/Resources/values/colors.xml" Line="6" Column="47" />
+      <File FileName="MyUserListAndroid/Resources/values/colors.xml" Line="8" Column="18" />
+      <File FileName="MyUserListAndroid/Properties/AndroidManifest.xml" />
+      <File FileName="MyUserListAndroid/Resources/values/strings.xml" Line="8" Column="94" />
+      <File FileName="MyUserListAndroid/Resources/Resource.designer.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="MyUserListAndroid" expanded="True">
             <Node name="MyUserListAndroid" expanded="True">
-              <Node name="Models" expanded="True" />
+              <Node name="Assets" expanded="True" />
+              <Node name="Models" expanded="True">
+                <Node name="ORM" expanded="True" />
+              </Node>
+              <Node name="Properties" expanded="True" />
               <Node name="Resources" expanded="True">
-                <Node name="layout" expanded="True" />
-                <Node name="values" expanded="True">
-                  <Node name="colors.xml" selected="True" />
-                </Node>
+                <Node name="values" expanded="True" />
+              </Node>
+              <Node name="Services" expanded="True" />
+              <Node name="Validators" expanded="True">
+                <Node name="PasswordValidation.cs" selected="True" />
               </Node>
             </Node>
           </Node>

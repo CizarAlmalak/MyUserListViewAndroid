@@ -12,7 +12,7 @@ namespace MyUserListAndroid
     [Activity(Label = "Registration", Theme = "@style/AppTheme.NoActionBar")]
     public class UserRegistration : AppCompatActivity, ITextWatcher
     {
-        private IValidate passValidation;
+        private IValidate userValidation;
         private TextInputEditText firstName;
         private TextInputEditText lastName;
         private TextInputEditText age;
@@ -36,7 +36,7 @@ namespace MyUserListAndroid
             passwordInputField = FindViewById<TextInputEditText>(Resource.Id.passwordInput);
             passwordInputField.AddTextChangedListener(this);
 
-            passValidation = new PasswordValidation();
+            userValidation = new UserValidation();
 
             db = new DataBaseService();
             db.InitDataBase();
@@ -44,9 +44,19 @@ namespace MyUserListAndroid
 
         private void onSubmit(object sender, EventArgs eventArgs)
         {
-            firstName.Error = string.IsNullOrEmpty(firstName.Text) ? "This field is required" : null;
-            lastName.Error = string.IsNullOrEmpty(lastName.Text) ? "This field is required" : null;
-            age.Error = string.IsNullOrEmpty(age.Text) ? "This field is required" : null;
+            firstName.Error = getStringResource(userValidation.ValidateUser(firstName.Text));
+            lastName.Error = getStringResource(userValidation.ValidateUser(lastName.Text));
+            age.Error = getStringResource(userValidation.ValidateUser(age.Text));
+
+            int validAge;
+            try
+            {
+                validAge = Int32.Parse(age.Text);
+            }
+            catch
+            {
+                validAge = 0;
+            }
 
             if (firstName.Error == null && lastName.Error == null && age.Error == null)
             {
@@ -54,26 +64,25 @@ namespace MyUserListAndroid
                 {
                     FirstName = firstName.Text,
                     LastName = lastName.Text,
-                    Age = Int32.Parse(age.Text)
+                    Age = validAge
                 });
                 Finish();
             }
         }
 
-        public void AfterTextChanged(IEditable s)
+        private string getStringResource(int resourceId)
         {
-            //
-        }
 
-        public void BeforeTextChanged(ICharSequence s, int start, int count, int after)
-        {
-            //
+            return resourceId != -1 ? this.Resources.GetString(resourceId) : null;
         }
 
         public void OnTextChanged(ICharSequence s, int start, int before, int count)
         {
-            passwordInputField.Error = passValidation.Validate(s.ToString());
+            passwordInputField.Error = getStringResource(userValidation.ValidatePassword(s.ToString()));
             submitButton.Enabled |= passwordInputField.Error == null;
         }
+
+        public void BeforeTextChanged(ICharSequence s, int start, int count, int after){}
+        public void AfterTextChanged(IEditable s) { }
     }
 }

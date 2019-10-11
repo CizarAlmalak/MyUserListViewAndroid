@@ -64,10 +64,10 @@
     <Compile Include="Models\UserInfo.cs" />
     <Compile Include="UserListViewAdapter.cs" />
     <Compile Include="UserRegistration.cs" />
-    <Compile Include="IValidate.cs" />
-    <Compile Include="PasswordValidation.cs" />
-    <Compile Include="DataBaseService.cs" />
-    <Compile Include="Models\UserInfoTable.cs" />
+    <Compile Include="Validators\IValidate.cs" />
+    <Compile Include="Validators\UserValidation.cs" />
+    <Compile Include="Services\DataBaseService.cs" />
+    <Compile Include="Models\ORM\UserInfoTable.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -120,6 +120,9 @@
   <ItemGroup>
     <Folder Include="Resources\drawable\" />
     <Folder Include="Models\" />
+    <Folder Include="Validators\" />
+    <Folder Include="Services\" />
+    <Folder Include="Models\ORM\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Xamarin.Android.Support.Design" Version="28.0.0.1" />
