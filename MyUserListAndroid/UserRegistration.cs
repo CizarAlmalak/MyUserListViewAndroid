@@ -75,15 +75,32 @@ namespace MyUserListAndroid
             return resourceId != -1 ? this.Resources.GetString(resourceId) : null;
         }
 
-        /*
-         * Listener events of the ITextWatcher interface
-         */
+        /// <summary>
+        /// Event fires when text has changes on the password field
+        /// </summary>
+        /// <param name="s">The input text of type ICharSequence</param>
+        /// <param name="start">The start position of type int</param>
+        /// <param name="before"></param>
+        /// <param name="count">Length of string</param>
         public void OnTextChanged(ICharSequence s, int start, int before, int count)
         {
             passwordInputField.Error = GetStringResource(userValidation.ValidatePassword(s.ToString()));
             submitButton.Enabled |= passwordInputField.Error == null;
         }
+
+        /// <summary>
+        /// Event fires before the text is changed
+        /// </summary>
+        /// <param name="s"></param>
+        /// <param name="start"></param>
+        /// <param name="count"></param>
+        /// <param name="after"></param>
         public void BeforeTextChanged(ICharSequence s, int start, int count, int after){}
+
+        /// <summary>
+        /// Event fires when text has changed
+        /// </summary>
+        /// <param name="s"></param>
         public void AfterTextChanged(IEditable s) { }
     }
 }

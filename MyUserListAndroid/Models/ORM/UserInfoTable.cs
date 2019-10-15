@@ -2,9 +2,9 @@
 
 namespace MyUserListAndroid.Models
 {
-    /*
-     * Database table model
-     */
+    /// <summary>
+    /// Model for the tabel that is stored in the database
+    /// </summary>
     [Table("Items")]
     public class UserInfoTable
     {

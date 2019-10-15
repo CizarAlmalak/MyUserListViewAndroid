@@ -11,11 +11,9 @@ namespace MyUserListAndroid
         private readonly SQLiteConnection db;
         private static DataBaseService instance;
 
-        /*
-         * Create a singleton instance of the database
-         * And creates the table of type UserInfoTable.
-         * Return: Singleton instance of the database
-         */
+        /// <summary>
+        /// Creates a singleton instance of the database. Also creates the table once.
+        /// </summary>
         public static DataBaseService Instance
         {
             get
@@ -42,21 +40,19 @@ namespace MyUserListAndroid
            db.CreateTable<UserInfoTable>();
         }
 
-        /*
-         * Insert row into the created table using the
-         * current db instance.
-         * @Param: Row of type UserInfoTable
-         */
+        /// <summary>
+        /// Insert new row of user information in the database
+        /// </summary>
+        /// <param name="userInfo">The user information of type UserInfoTable</param>
         public void InsertTable(UserInfoTable userInfo)
         {
             db.Insert(userInfo);
         }
 
-        /*
-         * Returns a list of all the table content
-         * using the current db instance.
-         * Return: List of type UserInfo
-         */
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         public List<UserInfo> getUserInfo()
         {
             List<UserInfo> userList = new List<UserInfo>();
@@ -75,9 +71,9 @@ namespace MyUserListAndroid
             return userList;
         }
 
-        /*
-         * Closes the db instance.
-         */
+        /// <summary>
+        /// Close db instance.
+        /// </summary>
         public void CloseDB()
         {
             db.Close();

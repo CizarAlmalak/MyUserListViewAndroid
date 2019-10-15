@@ -1,16 +1,14 @@
-﻿using System;
-using System.Text.RegularExpressions;
-using Android.Content.Res;
+﻿using System.Text.RegularExpressions;
 
 namespace MyUserListAndroid
 {
     public class UserValidation : IValidate
     {
-        /*
-         * Validation of the password field
-         * @param: password of type string
-         * Return: Error message id of type int
-         */
+        /// <summary>
+        /// Validates the password field, based on six conditions.
+        /// </summary>
+        /// <param name="password">Passed password of type string</param>
+        /// <returns>Returns string resource id of type int</returns>
         public int ValidatePassword(string password)
         {
             if (!Regex.IsMatch(password, @"^[a-zA-Z0-9]+$"))
@@ -36,12 +34,11 @@ namespace MyUserListAndroid
             return -1;
         }
 
-        /*
-         * Validate if field is not empty of on the first name, lastname
-         * and age fields. 
-         * @param: user info of type string
-         * Return: Error message id of type int
-         */
+        /// <summary>
+        /// Validate if the first name, last name and age fields are populated
+        /// </summary>
+        /// <param name="userInfo">The specific field of type string</param>
+        /// <returns>Returns string resource id of type int</returns>
         public int ValidateUserInfoRequired(string userInfo)
         {
             return string.IsNullOrEmpty(userInfo) ? Resource.String.error_field_is_required : -1;

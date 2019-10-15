@@ -11,30 +11,47 @@ namespace MyUserListAndroid
         private readonly List<UserInfo> userInfo;
         private readonly Context activityContext;
 
-        /*
-         * Pass and set the user and context to the adapter.
-         * @param: parent context of type contect
-         * @param: list of users of type UserInfo
-         */
+        /// <summary>
+        /// This functions passes the User list in the adapter
+        /// </summary>
+        /// <param name="context">Parent context of type Context</param>
+        /// <param name="userList">List of all the users in the database</param>
         public UserListViewAdapter(Context context, List<UserInfo> userList)
         {
             userInfo = userList;
             activityContext = context;
         }
 
-        /*
-         * Override methods of the BaseAdapter contract, to read and bind the
-         * users to the ListView.
-         */
+        /// <summary>
+        /// BaseAdapter contract method
+        /// </summary>
+        /// <param name="position">Position of type int</param>
+        /// <returns>The user on position of type UserInfo</returns>
         public override UserInfo this[int position] => userInfo[position];
 
+        /// <summary>
+        /// returns the amount of users in the list
+        /// </summary>
         public override int Count => userInfo.Count;
 
+
+        /// <summary>
+        /// returns a id of the user in the list. In this case position equals id
+        /// </summary>
+        /// <param name="position">position of type int</param>
+        /// <returns>id of type int</returns>
         public override long GetItemId(int position)
         {
             return position;
         }
 
+        /// <summary>
+        /// Binds the user info to the view.
+        /// </summary>
+        /// <param name="position">position of the user in the list of type int</param>
+        /// <param name="convertView">The row in the table view of type view</param>
+        /// <param name="parent">Parent of type ViewGroup</param>
+        /// <returns></returns>
         public override View GetView(int position, View convertView, ViewGroup parent)
         {
             View row = convertView;

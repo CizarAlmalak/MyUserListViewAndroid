@@ -1,8 +1,8 @@
 ﻿namespace MyUserListAndroid.Models
 {
-    /*
-     * Model for the first the card view
-     */
+    /// <summary>
+    /// Model for the user information first name, last name and age fields.
+    /// </summary>
     public class UserInfo
     {
         public string FirstName { get; set; }
