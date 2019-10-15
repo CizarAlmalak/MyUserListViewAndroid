@@ -8,15 +8,24 @@ namespace MyUserListAndroid
 {
     public class UserListViewAdapter : BaseAdapter<UserInfo>
     {
-        private List<UserInfo> userInfo;
-        private Context activityContext;
+        private readonly List<UserInfo> userInfo;
+        private readonly Context activityContext;
 
+        /*
+         * Pass and set the user and context to the adapter.
+         * @param: parent context of type contect
+         * @param: list of users of type UserInfo
+         */
         public UserListViewAdapter(Context context, List<UserInfo> userList)
         {
             userInfo = userList;
             activityContext = context;
         }
 
+        /*
+         * Override methods of the BaseAdapter contract, to read and bind the
+         * users to the ListView.
+         */
         public override UserInfo this[int position] => userInfo[position];
 
         public override int Count => userInfo.Count;

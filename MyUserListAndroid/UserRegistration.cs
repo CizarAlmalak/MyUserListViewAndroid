@@ -43,9 +43,9 @@ namespace MyUserListAndroid
 
         private void OnSubmit(object sender, EventArgs eventArgs)
         {
-            firstName.Error = GetStringResource(userValidation.ValidateUser(firstName.Text));
-            lastName.Error = GetStringResource(userValidation.ValidateUser(lastName.Text));
-            age.Error = GetStringResource(userValidation.ValidateUser(age.Text));
+            firstName.Error = GetStringResource(userValidation.ValidateUserInfoRequired(firstName.Text));
+            lastName.Error = GetStringResource(userValidation.ValidateUserInfoRequired(lastName.Text));
+            age.Error = GetStringResource(userValidation.ValidateUserInfoRequired(age.Text));
 
             int validAge;
             try
@@ -76,7 +76,7 @@ namespace MyUserListAndroid
         }
 
         /*
-         * Control events of ITextWatcher
+         * Listener events of the ITextWatcher interface
          */
         public void OnTextChanged(ICharSequence s, int start, int before, int count)
         {

@@ -42,7 +42,7 @@ namespace MyUserListAndroid
          * @param: user info of type string
          * Return: Error message id of type int
          */
-        public int ValidateUser(string userInfo)
+        public int ValidateUserInfoRequired(string userInfo)
         {
             return string.IsNullOrEmpty(userInfo) ? Resource.String.error_field_is_required : -1;
         }
