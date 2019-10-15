@@ -1,6 +1,8 @@
-﻿using System;
-namespace MyUserListAndroid.Models
+﻿namespace MyUserListAndroid.Models
 {
+    /*
+     * Model for the first the card view
+     */
     public class UserInfo
     {
         public string FirstName { get; set; }

@@ -27,7 +27,7 @@ namespace MyUserListAndroid
             SetContentView(Resource.Layout.user_registration);
 
             submitButton = FindViewById<Button>(Resource.Id.submitButton);
-            submitButton.Click += onSubmit;
+            submitButton.Click += OnSubmit;
 
             firstName = FindViewById<TextInputEditText>(Resource.Id.firstNameInput);
             lastName = FindViewById<TextInputEditText>(Resource.Id.lastNameInput);
@@ -41,11 +41,11 @@ namespace MyUserListAndroid
             db = DataBaseService.Instance;
         }
 
-        private void onSubmit(object sender, EventArgs eventArgs)
+        private void OnSubmit(object sender, EventArgs eventArgs)
         {
-            firstName.Error = getStringResource(userValidation.ValidateUser(firstName.Text));
-            lastName.Error = getStringResource(userValidation.ValidateUser(lastName.Text));
-            age.Error = getStringResource(userValidation.ValidateUser(age.Text));
+            firstName.Error = GetStringResource(userValidation.ValidateUser(firstName.Text));
+            lastName.Error = GetStringResource(userValidation.ValidateUser(lastName.Text));
+            age.Error = GetStringResource(userValidation.ValidateUser(age.Text));
 
             int validAge;
             try
@@ -69,18 +69,20 @@ namespace MyUserListAndroid
             }
         }
 
-        private string getStringResource(int resourceId)
+        private string GetStringResource(int resourceId)
         {
 
             return resourceId != -1 ? this.Resources.GetString(resourceId) : null;
         }
 
+        /*
+         * Control events of ITextWatcher
+         */
         public void OnTextChanged(ICharSequence s, int start, int before, int count)
         {
-            passwordInputField.Error = getStringResource(userValidation.ValidatePassword(s.ToString()));
+            passwordInputField.Error = GetStringResource(userValidation.ValidatePassword(s.ToString()));
             submitButton.Enabled |= passwordInputField.Error == null;
         }
-
         public void BeforeTextChanged(ICharSequence s, int start, int count, int after){}
         public void AfterTextChanged(IEditable s) { }
     }

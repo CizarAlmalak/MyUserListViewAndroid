@@ -3,14 +3,10 @@ using System.Collections.Generic;
 using Android.App;
 using Android.Content;
 using Android.OS;
-using Android.Runtime;
 using Android.Support.Design.Widget;
 using Android.Support.V7.App;
-using Android.Views;
 using Android.Widget;
-using SQLite;
 using MyUserListAndroid.Models;
-using System.IO;
 
 namespace MyUserListAndroid
 {
@@ -41,7 +37,6 @@ namespace MyUserListAndroid
             base.OnResume();
 
             db = DataBaseService.Instance;
-            db.CreateTable();
             userList = db.getUserInfo();
 
             if (userList != null)
@@ -52,34 +47,10 @@ namespace MyUserListAndroid
 
         }
 
-        public override bool OnCreateOptionsMenu(IMenu menu)
-        {
-            MenuInflater.Inflate(Resource.Menu.menu_main, menu);
-            return true;
-        }
-
-        public override bool OnOptionsItemSelected(IMenuItem item)
-        {
-            int id = item.ItemId;
-            if (id == Resource.Id.action_settings)
-            {
-                return true;
-            }
-
-            return base.OnOptionsItemSelected(item);
-        }
-
         private void FabOnClick(object sender, EventArgs eventArgs)
         {
             var intent = new Intent(this, typeof(UserRegistration));
             StartActivity(intent);
-        }
-
-        public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
-        {
-            Xamarin.Essentials.Platform.OnRequestPermissionsResult(requestCode, permissions, grantResults);
-
-            base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
         }
     }
 }

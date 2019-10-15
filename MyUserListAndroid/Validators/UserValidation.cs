@@ -6,7 +6,11 @@ namespace MyUserListAndroid
 {
     public class UserValidation : IValidate
     {
-
+        /*
+         * Validation of the password field
+         * @param: password of type string
+         * Return: Error message id of type int
+         */
         public int ValidatePassword(string password)
         {
             if (!Regex.IsMatch(password, @"^[a-zA-Z0-9]+$"))
@@ -32,6 +36,12 @@ namespace MyUserListAndroid
             return -1;
         }
 
+        /*
+         * Validate if field is not empty of on the first name, lastname
+         * and age fields. 
+         * @param: user info of type string
+         * Return: Error message id of type int
+         */
         public int ValidateUser(string userInfo)
         {
             return string.IsNullOrEmpty(userInfo) ? Resource.String.error_field_is_required : -1;
